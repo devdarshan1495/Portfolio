@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ─── Design System: Warm Retro Pixel-Art Palette ───────────────────────── */
+
+@theme inline {
+  /* ── Core Colours ── */
+  --color-cream: #FAF6F0;
+  --color-charcoal: #2D2A26;
+  --color-warm-grey: #7A756E;
+  --color-light-grey: #E8E4DE;
+  --color-border: #D4CFC7;
+
+  /* ── Retro Palette ── */
+  --color-sky: #7BAECC;
+  --color-sky-light: #D0E6F0;
+  --color-golden: #E8B84B;
+  --color-golden-light: #F5E6BD;
+  --color-pink: #D4889A;
+  --color-pink-light: #F0D4DC;
+  --color-sage: #8FBB9A;
+  --color-sage-light: #D4E8DA;
+  --color-purple: #9B8EC4;
+  --color-purple-light: #DDD6EE;
+  --color-brown: #A67C5A;
+  --color-brown-light: #E0CDB8;
+
+  /* ── Semantic ── */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-charcoal);
+  --color-muted: var(--color-warm-grey);
+  --color-accent: var(--color-sky);
+  --color-accent-light: var(--color-sky-light);
+
+  /* ── Typography ── */
+  --font-sans: "Inter", "Outfit", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Spacing ── */
+  --spacing-page: 1.5rem;
+  --max-width-content: 72rem;
+}
+
+/* ─── Base Styles ───────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Focus States ──────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--color-sky);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────────── */
+
+::selection {
+  background-color: var(--color-golden-light);
+  color: var(--color-charcoal);
+}
+
+/* ─── Transitions ───────────────────────────────────────────────────────── */
+
+a, button {
+  transition: color 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-warm-grey);
+}
