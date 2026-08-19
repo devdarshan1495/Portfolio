@@ -6,15 +6,15 @@ export default function EducationPreview() {
   if (!current) return null;
 
   return (
-    <section className="border-b border-border" aria-label="Education preview">
+    <section className="bg-sage-light" aria-label="Education preview">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
         <div className="flex items-baseline justify-between mb-8">
-          <h2 className="font-mono text-xs tracking-widest uppercase text-muted">
+          <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal">
             Education
           </h2>
           <Link
             href="/education"
-            className="text-sm text-warm-grey hover:text-charcoal transition-colors group"
+            className="text-sm text-charcoal/70 hover:text-charcoal transition-colors group"
           >
             View details
             <span className="inline-block transition-transform group-hover:translate-x-0.5 ml-1">
@@ -23,17 +23,17 @@ export default function EducationPreview() {
           </Link>
         </div>
 
-        <div className="bg-golden-light rounded-lg p-6 md:p-8">
+        <div className="bg-white/40 rounded-lg p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
               <h3 className="text-lg font-semibold text-charcoal">
                 {current.degree} — {current.field}
               </h3>
-              <p className="mt-1 text-sm text-warm-grey">
+              <p className="mt-1 text-sm text-charcoal/70">
                 {current.institution}
               </p>
             </div>
-            <span className="font-mono text-xs text-muted whitespace-nowrap">
+            <span className="font-mono text-xs text-charcoal/60 whitespace-nowrap">
               {current.startDate} — {current.endDate}
             </span>
           </div>

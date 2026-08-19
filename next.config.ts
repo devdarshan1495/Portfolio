@@ -33,6 +33,9 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+
+  // Disable the dev toolbar (the "N" button in bottom-left)
+  devIndicators: false,
 };
 
 export default nextConfig;

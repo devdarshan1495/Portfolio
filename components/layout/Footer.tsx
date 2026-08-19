@@ -16,7 +16,7 @@ export default function Footer() {
               className="font-mono text-sm font-semibold tracking-wide text-charcoal"
             >
               {siteConfig.firstName.toLowerCase()}
-              <span className="text-sky">.</span>
+              <span className="text-golden">.</span>
             </Link>
             <p className="mt-2 text-sm text-muted max-w-xs">
               {siteConfig.title}

@@ -1,35 +1,37 @@
 @import "tailwindcss";
 
-/* ─── Design System: Warm Retro Pixel-Art Palette ───────────────────────── */
+/* ─── Design System: Vibrant Retro Pixel-Art Palette ────────────────────── */
 
 @theme inline {
+  /* ── Section Background Colours (from colour reference) ── */
+  --color-golden: #F2B735;
+  --color-golden-soft: #F5CC5E;
+  --color-golden-light: #FBE8A8;
+  --color-blue: #5B9BD5;
+  --color-blue-soft: #7CB3E0;
+  --color-blue-light: #C9E0F2;
+  --color-pink: #E891A8;
+  --color-pink-soft: #F0A8BC;
+  --color-pink-light: #F8D4DE;
+  --color-lavender: #B8A0D4;
+  --color-lavender-soft: #C9B5DF;
+  --color-lavender-light: #E4D9F0;
+  --color-sage: #8FBB9A;
+  --color-sage-soft: #A8CCAF;
+  --color-sage-light: #D4E8DA;
+
   /* ── Core Colours ── */
   --color-cream: #FAF6F0;
   --color-charcoal: #2D2A26;
-  --color-warm-grey: #7A756E;
+  --color-warm-grey: #5A5550;
   --color-light-grey: #E8E4DE;
   --color-border: #D4CFC7;
-
-  /* ── Retro Palette ── */
-  --color-sky: #7BAECC;
-  --color-sky-light: #D0E6F0;
-  --color-golden: #E8B84B;
-  --color-golden-light: #F5E6BD;
-  --color-pink: #D4889A;
-  --color-pink-light: #F0D4DC;
-  --color-sage: #8FBB9A;
-  --color-sage-light: #D4E8DA;
-  --color-purple: #9B8EC4;
-  --color-purple-light: #DDD6EE;
-  --color-brown: #A67C5A;
-  --color-brown-light: #E0CDB8;
+  --color-white: #ffffff;
 
   /* ── Semantic ── */
   --color-background: var(--color-cream);
   --color-foreground: var(--color-charcoal);
   --color-muted: var(--color-warm-grey);
-  --color-accent: var(--color-sky);
-  --color-accent-light: var(--color-sky-light);
 
   /* ── Typography ── */
   --font-sans: var(--font-inter), system-ui, sans-serif;
@@ -73,7 +75,7 @@ body {
 /* ─── Focus States ──────────────────────────────────────────────────────── */
 
 :focus-visible {
-  outline: 2px solid var(--color-sky);
+  outline: 2px solid var(--color-charcoal);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -81,7 +83,7 @@ body {
 /* ─── Selection ─────────────────────────────────────────────────────────── */
 
 ::selection {
-  background-color: var(--color-golden-light);
+  background-color: var(--color-golden);
   color: var(--color-charcoal);
 }
 
@@ -89,7 +91,7 @@ body {
 
 a, button {
   transition: color 0.15s ease, background-color 0.15s ease,
-    border-color 0.15s ease, opacity 0.15s ease;
+    border-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
 }
 
 /* ─── Scrollbar ─────────────────────────────────────────────────────────── */

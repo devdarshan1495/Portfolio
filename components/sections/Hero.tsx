@@ -4,24 +4,21 @@ import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function Hero() {
   return (
-    <section className="border-b border-border" aria-label="Introduction">
+    <section className="bg-golden" aria-label="Introduction">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
           {/* Text Content */}
           <div className="order-2 md:order-1">
-            <p className="font-mono text-xs tracking-widest uppercase text-muted mb-4">
-              Portfolio
-            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.1] tracking-tight">
               {siteConfig.heroHeading}
             </h1>
-            <p className="mt-3 text-xl md:text-2xl text-sky font-medium">
+            <p className="mt-3 text-xl md:text-2xl text-charcoal/80 font-medium">
               {siteConfig.heroSubheading}
             </p>
-            <p className="mt-2 text-sm text-muted font-mono">
+            <p className="mt-2 text-sm text-charcoal/60 font-mono">
               {siteConfig.title}
             </p>
-            <p className="mt-6 text-base text-warm-grey leading-relaxed max-w-lg">
+            <p className="mt-6 text-base text-charcoal/80 leading-relaxed max-w-lg">
               {siteConfig.shortBio}
             </p>
 
@@ -30,16 +27,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Illustration — golden background panel */}
+          {/* Illustration — no background panel, just the image bigger */}
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <div className="relative w-72 h-48 md:w-80 md:h-56 lg:w-96 lg:h-64 rounded-lg overflow-hidden bg-[#F2B735]">
+            <div className="relative w-80 h-56 md:w-[400px] md:h-[280px] lg:w-[460px] lg:h-[320px]">
               <Image
                 src="/images/illustrations/hero-dev.png"
                 alt="Pixel art illustration of Devdarshan waving with a laptop"
                 fill
                 className="object-contain"
                 priority
-                sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
+                sizes="(max-width: 768px) 320px, (max-width: 1024px) 400px, 460px"
               />
             </div>
           </div>

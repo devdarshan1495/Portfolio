@@ -33,11 +33,11 @@ export default function Navigation() {
         {/* Logo / Name */}
         <Link
           href="/"
-          className="font-mono text-sm font-semibold tracking-wide text-charcoal hover:text-sky transition-colors"
+          className="font-mono text-sm font-semibold tracking-wide text-charcoal hover:text-golden transition-colors"
           aria-label="Go to homepage"
         >
           {siteConfig.firstName.toLowerCase()}
-          <span className="text-sky">.</span>
+          <span className="text-golden">.</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -54,7 +54,7 @@ export default function Navigation() {
               >
                 {link.label}
                 {isActive(link.href) && (
-                  <span className="absolute bottom-0 left-3 right-3 h-px bg-sky" />
+                  <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-golden" />
                 )}
               </Link>
             </li>
