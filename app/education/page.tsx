@@ -81,8 +81,8 @@ export default function EducationPage() {
               </div>
             </div>
 
-            <div className="flex justify-center md:justify-end md:-mt-2 lg:-mt-4">
-              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 lg:sticky lg:top-32">
+            <div className="flex justify-center md:justify-end md:-mt-2 lg:-mt-4 lg:sticky lg:top-32">
+              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
                 <Image
                   src="/images/illustrations/Education (2).png"
                   alt="Pixel art illustration for education"
