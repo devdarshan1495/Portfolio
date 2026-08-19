@@ -26,6 +26,9 @@
 LIST.md
 AGENTS.md
 claude.md
+CLAUDE.md
+AI_CONTEXT.md
+personal.md
 
 # debug
 npm-debug.log*
