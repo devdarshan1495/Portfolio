@@ -1,4 +1,7 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -21,15 +24,36 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Integrate with email service (e.g., Resend, SendGrid, Nodemailer)
-    // For now, just log the message
-    console.log("Contact form submission:", { name, email, subject, message });
+    const { error } = await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: "saradevdarshan2020@gmail.com",
+      replyTo: email,
+      subject: `New Portfolio Message: ${subject}`,
+      html: `
+        <h3>New message from your portfolio</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <br/>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br/>')}</p>
+      `,
+    });
+
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { success: true, message: "Message received! I'll get back to you soon." },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("API error:", error);
     return NextResponse.json(
       { error: "Failed to process request" },
       { status: 500 }
