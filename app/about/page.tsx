@@ -44,7 +44,7 @@ export default function AboutPage() {
 
       {/* Bio — bigger text */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-10">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-0 pb-10">
           <div className="max-w-2xl space-y-5">
             {siteConfig.longBio.map((paragraph, i) => (
               <p key={i} className="text-lg text-charcoal leading-relaxed">

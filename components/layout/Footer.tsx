@@ -1,12 +1,33 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/content/site";
 import SocialLinks from "@/components/ui/SocialLinks";
 
+const pageColors: Record<string, string> = {
+  "/": "#D0E6F0",
+  "/about": "#F5E6BD",
+  "/projects": "#E4D9F0",
+  "/education": "#FAF6F0",
+  "/certifications": "#E8C4A0",
+  "/blog": "#D4E8DA",
+  "/contact": "#fa8202",
+};
+
+function getPageColor(pathname: string): string {
+  if (pageColors[pathname]) return pageColors[pathname];
+  if (pathname.startsWith("/projects/")) return pageColors["/projects"];
+  return "#FAF6F0";
+}
+
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+  const footerBg = getPageColor(pathname);
 
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-charcoal/10" style={{ backgroundColor: footerBg }}>
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Branding */}

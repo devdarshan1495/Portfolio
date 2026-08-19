@@ -6,6 +6,20 @@ Format: [commit hash] — description. Use `git checkout <hash>` to rollback.
 
 ---
 
+## v0.4.0 — Footer Page Colours, Illustrations & Layout Refinements
+
+- Footer background now matches each page's colour (blue for Home, golden for About, orange for Contact, etc.)
+- Hero heading changed to "Hi, I'm a Dev."
+- Removed redundant "Get in touch" contact section from homepage (footer already handles it)
+- About page: reduced gap between header and bio section, tighter layout
+- Projects page: added `Projects.png` pixel-art illustration top-right
+- Education page: added `Education (2).png` illustration top-right, reduced gap between header and content
+- Certifications page: added `Certifications_demo (1).png` illustration top-right
+- All page headers now use consistent grid layout with illustration on the right
+- Deleted unused old illustration files (`Education.png`, `Certifications_demo.png`)
+
+---
+
 ## v0.3.0 — Uniform Page Backgrounds & Earthy Palette `a399f5b`
 
 - Each page has ONE uniform background colour (no more sectioned colouring)

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { education, achievements } from "@/content/education";
 
 export const metadata: Metadata = {
@@ -12,19 +13,34 @@ export default function EducationPage() {
     <div className="bg-pg-education min-h-full">
       {/* Header */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
-          <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-4">
-            Education
-          </p>
-          <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
-            Education & Achievements
-          </h1>
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 pb-2">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
+            <div>
+              <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-3">
+                Education
+              </p>
+              <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
+                Education & Achievements
+              </h1>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <div className="relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72">
+                <Image
+                  src="/images/illustrations/Education (2).png"
+                  alt="Pixel art illustration for education"
+                  fill
+                  className="object-contain object-top"
+                  sizes="(max-width: 768px) 208px, (max-width: 1024px) 240px, 288px"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Education Timeline */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16 pt-0">
           <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-8">
             Education
           </h2>

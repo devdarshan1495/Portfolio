@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   firstName: "Dev",
   title: "Computer Science Student · Developer · Builder",
   tagline: "I build software & explore AI.",
-  heroHeading: "Hi, I'm Dev.",
+  heroHeading: "Hi, I'm {a} Dev.",
   heroSubheading: "I build software & explore AI.",
   shortBio:
     "I'm a Computer Science student who enjoys building things, experimenting with technology, and figuring out how things work. I'm currently exploring software development, cloud, AI/ML, and everything in between.",
