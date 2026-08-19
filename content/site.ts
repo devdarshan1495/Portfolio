@@ -9,11 +9,10 @@ export const siteConfig: SiteConfig = {
   heroSubheading: "I build software & explore AI.",
   /** Phrases for the hero slot-machine animation. Each entry is the text after "Hi, I'm " */
   heroDescriptors: [
-    "Dev.",            // initial state
-    "a developer.",    // first custom transition
-    "learning ML.",    // carousel rotation
-    "a developer.",    // return
-    "Dev.",            // complete the cycle
+    "Dev.",
+    "a developer.",
+    "learning ML.",
+    "building stuff.",
   ],
   shortBio:
     "I'm a Computer Science student who enjoys building things, experimenting with technology, and figuring out how things work. I'm currently exploring software development, cloud, AI/ML, and everything in between.",

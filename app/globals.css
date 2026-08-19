@@ -130,9 +130,21 @@ a, button {
 
 /* ─── Hero Animation Keyframes ──────────────────────────────────────────── */
 
-@keyframes hero-drop-in {
+/* Roll down: current goes UP, new comes from BELOW */
+@keyframes hero-roll-out-up {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+}
+
+@keyframes hero-roll-in-down {
+  0% {
+    transform: translateY(110%);
     opacity: 0;
   }
   100% {
@@ -141,29 +153,21 @@ a, button {
   }
 }
 
-@keyframes hero-shift-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(var(--shift-distance, 1.2em));
-  }
-}
-
-@keyframes hero-roll-out {
+/* Roll up: current goes DOWN, new comes from ABOVE */
+@keyframes hero-roll-out-down {
   0% {
     transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(110%);
     opacity: 0;
   }
 }
 
-@keyframes hero-roll-in {
+@keyframes hero-roll-in-up {
   0% {
-    transform: translateY(100%);
+    transform: translateY(-110%);
     opacity: 0;
   }
   100% {

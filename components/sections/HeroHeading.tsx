@@ -6,8 +6,8 @@ import { siteConfig } from "@/content/site";
 /**
  * HeroHeading — Slot-machine style rolling text animation.
  *
- * All transitions use the same vertical rolling animation:
- * "Dev." → "a developer." → "learning ML." → "a developer." → "Dev."
+ * Sequence (alternating directions):
+ * "Dev." → ↓ "a developer." → ↑ "learning ML." → ↓ "building stuff." → ↑ "Dev."
  *
  * The static prefix "Hi, I'm " never moves.
  * The dynamic suffix rolls vertically inside a clipped viewport.
@@ -25,6 +25,7 @@ export default function HeroHeading() {
   const [phase, setPhase] = useState<AnimationPhase>("initial");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(1);
+  const [rollDirection, setRollDirection] = useState<"down" | "up">("down");
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -53,6 +54,7 @@ export default function HeroHeading() {
       case "initial":
         timerRef.current = setTimeout(() => {
           setNextIndex(1);
+          setRollDirection("down");
           setPhase("rolling");
         }, INITIAL_DELAY);
         break;
@@ -61,6 +63,7 @@ export default function HeroHeading() {
         const next = (currentIndex + 1) % descriptors.length;
         timerRef.current = setTimeout(() => {
           setNextIndex(next);
+          setRollDirection(currentIndex % 2 === 0 ? "down" : "up");
           setPhase("rolling");
         }, ROLL_PAUSE);
         break;
@@ -69,11 +72,7 @@ export default function HeroHeading() {
       case "rolling":
         timerRef.current = setTimeout(() => {
           setCurrentIndex(nextIndex);
-          if (nextIndex === 0) {
-            setPhase("initial");
-          } else {
-            setPhase("idle");
-          }
+          setPhase("idle");
         }, ROLL_DURATION);
         break;
     }
@@ -89,6 +88,8 @@ export default function HeroHeading() {
     );
   }
 
+  const isRollingDown = rollDirection === "down";
+
   return (
     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.1] tracking-tight">
       <span>Hi, I&apos;m </span>
@@ -101,7 +102,9 @@ export default function HeroHeading() {
           className="inline-block"
           style={{
             animation: phase === "rolling"
-              ? `hero-roll-out ${ROLL_DURATION}ms cubic-bezier(0.55, 0, 0.1, 1) forwards`
+              ? isRollingDown
+                ? `hero-roll-out-up ${ROLL_DURATION}ms cubic-bezier(0.55, 0, 0.1, 1) forwards`
+                : `hero-roll-out-down ${ROLL_DURATION}ms cubic-bezier(0.55, 0, 0.1, 1) forwards`
               : undefined,
           }}
         >
@@ -113,7 +116,9 @@ export default function HeroHeading() {
           <span
             className="absolute left-0 top-0 inline-block whitespace-nowrap"
             style={{
-              animation: `hero-roll-in ${ROLL_DURATION}ms cubic-bezier(0.55, 0, 0.1, 1) forwards`,
+              animation: isRollingDown
+                ? `hero-roll-in-down ${ROLL_DURATION}ms cubic-bezier(0.55, 0, 0.1, 1) forwards`
+                : `hero-roll-in-up ${ROLL_DURATION}ms cubic-bezier(0.55, 0, 0.1, 1) forwards`,
             }}
           >
             {descriptors[nextIndex]}
