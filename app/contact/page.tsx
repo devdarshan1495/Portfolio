@@ -161,12 +161,12 @@ export default function ContactPage() {
             </form>
 
             {/* Prefer email fallback */}
-            <div className="mt-8 pt-8 border-t border-charcoal/10">
-              <p className="text-sm text-charcoal/60">
+            <div className="mt-8 pt-8 border-t border-white/20">
+              <p className="text-sm text-white/70">
                 Prefer email?{" "}
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-charcoal underline underline-offset-2 hover:text-charcoal/70 transition-colors"
+                  className="text-white underline underline-offset-2 hover:text-white/80 transition-colors"
                 >
                   {siteConfig.email}
                 </a>

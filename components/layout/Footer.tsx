@@ -25,28 +25,34 @@ export default function Footer() {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
   const footerBg = getPageColor(pathname);
+  
+  const isContact = pathname === "/contact";
+  const borderClass = isContact ? "border-white/20" : "border-charcoal/10";
+  const textMain = isContact ? "text-white" : "text-charcoal";
+  const textMuted = isContact ? "text-white/70" : "text-muted";
+  const textLink = isContact ? "text-white/70 hover:text-white" : "text-warm-grey hover:text-charcoal";
 
   return (
-    <footer className="border-t border-charcoal/10" style={{ backgroundColor: footerBg }}>
+    <footer className={`border-t ${borderClass}`} style={{ backgroundColor: footerBg }}>
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Branding */}
           <div>
             <Link
               href="/"
-              className="font-mono text-sm font-semibold tracking-wide text-charcoal"
+              className={`font-mono text-sm font-semibold tracking-wide ${textMain}`}
             >
               {siteConfig.firstName.toLowerCase()}
-              <span className="text-golden">.</span>
+              <span className={isContact ? "text-white" : "text-golden"}>.</span>
             </Link>
-            <p className="mt-2 text-sm text-muted max-w-xs">
+            <p className={`mt-2 text-sm max-w-xs ${textMuted}`}>
               {siteConfig.title}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-mono text-xs tracking-wider uppercase text-muted mb-3">
+            <h3 className={`font-mono text-xs tracking-wider uppercase mb-3 ${textMuted}`}>
               Pages
             </h3>
             <ul className="space-y-2 text-sm" role="list">
@@ -60,7 +66,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-warm-grey hover:text-charcoal transition-colors"
+                    className={`${textLink} transition-colors`}
                   >
                     {link.label}
                   </Link>
@@ -71,7 +77,7 @@ export default function Footer() {
                   href={siteConfig.resumePath}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-warm-grey hover:text-charcoal transition-colors"
+                  className={`${textLink} transition-colors`}
                 >
                   Resume
                 </a>
@@ -81,7 +87,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="font-mono text-xs tracking-wider uppercase text-muted mb-3">
+            <h3 className={`font-mono text-xs tracking-wider uppercase mb-3 ${textMuted}`}>
               Connect
             </h3>
             <SocialLinks compact />
@@ -89,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted">
+        <div className={`mt-10 pt-6 border-t ${borderClass} flex flex-col sm:flex-row items-center justify-between gap-2 text-xs ${textMuted}`}>
           <p>© {currentYear} {siteConfig.name}</p>
           <p>
             Built with{" "}
@@ -97,7 +103,7 @@ export default function Footer() {
               href="https://nextjs.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-charcoal transition-colors"
+              className={`${isContact ? "hover:text-white" : "hover:text-charcoal"} transition-colors`}
             >
               Next.js
             </a>{" "}
@@ -106,7 +112,7 @@ export default function Footer() {
               href="https://vercel.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-charcoal transition-colors"
+              className={`${isContact ? "hover:text-white" : "hover:text-charcoal"} transition-colors`}
             >
               Vercel
             </a>
