@@ -33,7 +33,7 @@ export default function Navigation() {
         {/* Logo / Name */}
         <Link
           href="/"
-          className="font-mono text-sm font-semibold tracking-wide text-charcoal hover:text-golden transition-colors"
+          className="font-mono text-base font-semibold tracking-wide text-charcoal hover:text-golden transition-colors"
           aria-label="Go to homepage"
         >
           {siteConfig.firstName.toLowerCase()}

@@ -32,7 +32,6 @@ export default function AboutPreview() {
             </h3>
             <ul className="space-y-1.5 text-sm text-charcoal" role="list">
               {[
-                "Full-Stack Development",
                 "Cloud Computing",
                 "AI / Machine Learning",
                 "Data Structures & Algorithms",

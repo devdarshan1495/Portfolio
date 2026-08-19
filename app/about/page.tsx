@@ -66,12 +66,12 @@ export default function AboutPage() {
               </h2>
               <ul className="space-y-3" role="list">
                 {[
-                  "Full-Stack Development",
                   "Cloud Computing",
                   "AI / Machine Learning",
                   "Data Structures & Algorithms",
                   "Software Engineering",
                   "Modern Web Development",
+                  "Full-Stack Development",
                 ].map((interest) => (
                   <li
                     key={interest}

@@ -41,10 +41,6 @@ export default function EducationPage() {
       {/* Education Timeline */}
       <section>
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16 pt-0">
-          <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-8">
-            Education
-          </h2>
-
           <div className="space-y-6">
             {education.map((edu, i) => (
               <article
