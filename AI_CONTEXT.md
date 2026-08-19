@@ -22,7 +22,7 @@ The color palette is defined in `app/globals.css` using Tailwind CSS custom prop
 - **Education**: Cream (`#FAF6F0`)
 - **Certifications**: Dull Orange (`#E8C4A0`)
 - **Blog**: Sage Green (`#D4E8DA`)
-- **Contact**: Earthy Orange (`#DCA77B`) - *Specifically chosen to contrast with the green t-shirt in the contact illustration.*
+- **Contact**: Bright Orange (`#fa8202`) - *Specifically chosen to contrast with the green t-shirt in the contact illustration.*
 
 ### Semantic Colors
 - `charcoal` (`#2D2A26`): Used for almost all text.
