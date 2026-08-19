@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <>
+    <div className="bg-pg-projects min-h-full">
       {/* Header */}
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
-          <p className="font-mono text-xs tracking-widest uppercase text-muted mb-4">
+          <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-4">
             Projects
           </p>
           <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
             Things I&apos;ve Built
           </h1>
-          <p className="mt-3 text-base text-warm-grey max-w-lg">
+          <p className="mt-3 text-base text-charcoal/70 max-w-lg">
             A collection of projects — some completed, some in progress, all part
             of the learning journey.
           </p>
@@ -30,26 +30,26 @@ export default function ProjectsPage() {
 
       {/* Project List */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16">
           {projects.length > 0 ? (
-            <div className="border-t border-border">
+            <div className="border-t border-charcoal/10">
               {projects.map((project, i) => (
                 <ProjectCard key={project.slug} project={project} index={i} />
               ))}
             </div>
           ) : (
-            <div className="border border-border p-12 text-center">
+            <div className="bg-white/40 rounded-lg p-12 text-center">
               <p className="text-lg font-semibold text-charcoal mb-2">
                 Projects are on the way
               </p>
-              <p className="text-sm text-muted max-w-md mx-auto">
+              <p className="text-sm text-charcoal/60 max-w-md mx-auto">
                 I&apos;m currently working on some exciting projects. Check back
                 soon, or follow my{" "}
                 <a
                   href="https://github.com/devdarshan1495"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sky hover:text-charcoal transition-colors"
+                  className="text-charcoal hover:underline"
                 >
                   GitHub
                 </a>{" "}
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
               </p>
               <Link
                 href="/"
-                className="mt-6 inline-flex items-center gap-1 text-sm text-warm-grey hover:text-charcoal transition-colors"
+                className="mt-6 inline-flex items-center gap-1 text-sm text-charcoal/60 hover:text-charcoal transition-colors"
               >
                 ← Back home
               </Link>
@@ -65,6 +65,6 @@ export default function ProjectsPage() {
           )}
         </div>
       </section>
-    </>
+    </div>
   );
 }

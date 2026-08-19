@@ -25,7 +25,7 @@ export default function ResumeElement() {
         href={siteConfig.resumePath}
         target="_blank"
         rel="noopener noreferrer"
-        className="group inline-flex items-center gap-3 border border-border px-6 py-4 bg-white hover:border-sky transition-colors"
+        className="group inline-flex items-center gap-3 bg-white/40 rounded-lg px-6 py-4 hover:bg-white/60 transition-colors"
         onMouseEnter={() => setShowPreview(true)}
         onMouseLeave={() => setShowPreview(false)}
         onMouseMove={handleMouseMove}
@@ -38,7 +38,7 @@ export default function ResumeElement() {
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
-          className="text-sky flex-shrink-0"
+          className="text-golden flex-shrink-0"
           aria-hidden="true"
         >
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -51,11 +51,11 @@ export default function ResumeElement() {
           <span className="block text-sm font-semibold text-charcoal">
             My Resume
           </span>
-          <span className="block text-xs text-muted font-mono">
+          <span className="block text-xs text-charcoal/50 font-mono">
             PDF · Click to view
           </span>
         </div>
-        <span className="text-muted group-hover:text-sky group-hover:translate-x-0.5 transition-all ml-2">
+        <span className="text-charcoal/40 group-hover:text-charcoal group-hover:translate-x-0.5 transition-all ml-2">
           ↗
         </span>
       </a>

@@ -6,6 +6,28 @@ Format: [commit hash] — description. Use `git checkout <hash>` to rollback.
 
 ---
 
+## v0.3.0 — Uniform Page Backgrounds & Earthy Palette `a399f5b`
+
+- Each page has ONE uniform background colour (no more sectioned colouring)
+- Home: light blue · About: golden · Projects: lavender · Education: cream · Certifications: dull orange · Blog: sage · Contact: mint green
+- Per-page navbar active indicator bars (each page has its own colour)
+- Removed "PORTFOLIO" label from hero
+- Removed "Connect" section from about page (footer handles it)
+- Compact about header, bigger text on about & contact pages
+- Much bigger illustrations across all pages
+- Disabled Next.js dev toolbar (N button)
+- No pink — muted earthy tones only
+- Translucent white/40 cards on coloured backgrounds
+
+---
+
+## v0.2.1 — Colourful Sections Checkpoint `44bb68e`
+
+- Section-level colourful backgrounds (multi-colour per page)
+- Transitional version between v0.2.0 and v0.3.0
+
+---
+
 ## v0.2.0 — Colour & Illustration Update `bb11114`
 
 - Enlarged all pixel-art illustrations with new higher-res versions

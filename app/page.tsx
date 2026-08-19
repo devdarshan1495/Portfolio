@@ -9,7 +9,7 @@ import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-pg-home min-h-full">
       <Hero />
       <Currently />
       <SelectedProjects />
@@ -18,7 +18,7 @@ export default function Home() {
       <CertificationsPreview />
 
       {/* Resume Section */}
-      <section className="bg-golden-light" aria-label="Resume">
+      <section aria-label="Resume">
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
           <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal mb-8">
             Resume
@@ -28,18 +28,18 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section aria-label="Contact" className="bg-pink-light">
+      <section aria-label="Contact">
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
           <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal mb-4">
             Get in touch
           </h2>
-          <p className="text-base text-charcoal/80 mb-8 max-w-md">
+          <p className="text-base text-charcoal/70 mb-8 max-w-md">
             Interested in working together or just want to say hi? Feel free to
             reach out through any of the links below.
           </p>
           <SocialLinks />
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ export default function EducationPreview() {
   if (!current) return null;
 
   return (
-    <section className="bg-sage-light" aria-label="Education preview">
+    <section aria-label="Education preview">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
         <div className="flex items-baseline justify-between mb-8">
           <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal">
@@ -14,7 +14,7 @@ export default function EducationPreview() {
           </h2>
           <Link
             href="/education"
-            className="text-sm text-charcoal/70 hover:text-charcoal transition-colors group"
+            className="text-sm text-charcoal/60 hover:text-charcoal transition-colors group"
           >
             View details
             <span className="inline-block transition-transform group-hover:translate-x-0.5 ml-1">
@@ -29,11 +29,11 @@ export default function EducationPreview() {
               <h3 className="text-lg font-semibold text-charcoal">
                 {current.degree} — {current.field}
               </h3>
-              <p className="mt-1 text-sm text-charcoal/70">
+              <p className="mt-1 text-sm text-charcoal/60">
                 {current.institution}
               </p>
             </div>
-            <span className="font-mono text-xs text-charcoal/60 whitespace-nowrap">
+            <span className="font-mono text-xs text-charcoal/50 whitespace-nowrap">
               {current.startDate} — {current.endDate}
             </span>
           </div>

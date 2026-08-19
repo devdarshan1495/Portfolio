@@ -7,9 +7,9 @@ interface CertificateCardProps {
 
 export default function CertificateCard({ certification }: CertificateCardProps) {
   return (
-    <article className="border border-border bg-white group">
+    <article className="bg-white/50 rounded-lg overflow-hidden group">
       {/* Certificate Image */}
-      <div className="relative aspect-[4/3] overflow-hidden border-b border-border">
+      <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={certification.image}
           alt={`${certification.title} certificate from ${certification.issuer}`}
@@ -24,7 +24,7 @@ export default function CertificateCard({ certification }: CertificateCardProps)
         <h3 className="text-base font-semibold text-charcoal leading-tight">
           {certification.title}
         </h3>
-        <p className="mt-1 text-sm text-muted">
+        <p className="mt-1 text-sm text-charcoal/60">
           {certification.issuer}
           {certification.date && (
             <span className="ml-2 font-mono text-xs">· {certification.date}</span>
@@ -32,7 +32,7 @@ export default function CertificateCard({ certification }: CertificateCardProps)
         </p>
 
         {certification.description && (
-          <p className="mt-2 text-sm text-warm-grey leading-relaxed">
+          <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">
             {certification.description}
           </p>
         )}
@@ -42,7 +42,7 @@ export default function CertificateCard({ certification }: CertificateCardProps)
             href={certification.credentialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky hover:text-charcoal transition-colors group/link"
+            className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors group/link"
           >
             View Credential
             <span className="transition-transform group-hover/link:translate-x-0.5">→</span>

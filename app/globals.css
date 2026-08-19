@@ -1,24 +1,39 @@
 @import "tailwindcss";
 
-/* ─── Design System: Vibrant Retro Pixel-Art Palette ────────────────────── */
+/* ─── Design System: Muted Earthy Retro Palette ─────────────────────────── */
 
 @theme inline {
-  /* ── Section Background Colours (from colour reference) ── */
-  --color-golden: #F2B735;
-  --color-golden-soft: #F5CC5E;
-  --color-golden-light: #FBE8A8;
-  --color-blue: #5B9BD5;
-  --color-blue-soft: #7CB3E0;
-  --color-blue-light: #C9E0F2;
-  --color-pink: #E891A8;
-  --color-pink-soft: #F0A8BC;
-  --color-pink-light: #F8D4DE;
-  --color-lavender: #B8A0D4;
-  --color-lavender-soft: #C9B5DF;
-  --color-lavender-light: #E4D9F0;
-  --color-sage: #8FBB9A;
-  --color-sage-soft: #A8CCAF;
-  --color-sage-light: #D4E8DA;
+  /* ── Page Background Colours (one per page, muted & earthy) ── */
+  --color-pg-home: #D0E6F0;
+  --color-pg-about: #F5E6BD;
+  --color-pg-projects: #E4D9F0;
+  --color-pg-education: #FAF6F0;
+  --color-pg-certifications: #E8C4A0;
+  --color-pg-blog: #D4E8DA;
+  --color-pg-contact: #C8DEC8;
+
+  /* ── Navbar indicator colours (match page backgrounds) ── */
+  --color-bar-home: #7BAECC;
+  --color-bar-about: #D4A843;
+  --color-bar-projects: #9B8EC4;
+  --color-bar-education: #C5C0B8;
+  --color-bar-certifications: #C4905A;
+  --color-bar-blog: #7BAA85;
+  --color-bar-contact: #7BAA85;
+
+  /* ── Accent Colours ── */
+  --color-golden: #D4A843;
+  --color-golden-soft: #F5E6BD;
+  --color-blue: #7BAECC;
+  --color-blue-soft: #D0E6F0;
+  --color-lavender: #9B8EC4;
+  --color-lavender-soft: #E4D9F0;
+  --color-sage: #7BAA85;
+  --color-sage-soft: #D4E8DA;
+  --color-orange: #C4905A;
+  --color-orange-soft: #E8C4A0;
+  --color-mint: #7BAA85;
+  --color-mint-soft: #C8DEC8;
 
   /* ── Core Colours ── */
   --color-cream: #FAF6F0;

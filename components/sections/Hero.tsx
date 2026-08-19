@@ -4,7 +4,7 @@ import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function Hero() {
   return (
-    <section className="bg-golden" aria-label="Introduction">
+    <section aria-label="Introduction">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
           {/* Text Content */}
@@ -12,10 +12,10 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.1] tracking-tight">
               {siteConfig.heroHeading}
             </h1>
-            <p className="mt-3 text-xl md:text-2xl text-charcoal/80 font-medium">
+            <p className="mt-3 text-xl md:text-2xl text-charcoal/70 font-medium">
               {siteConfig.heroSubheading}
             </p>
-            <p className="mt-2 text-sm text-charcoal/60 font-mono">
+            <p className="mt-2 text-sm text-charcoal/50 font-mono">
               {siteConfig.title}
             </p>
             <p className="mt-6 text-base text-charcoal/80 leading-relaxed max-w-lg">
@@ -27,16 +27,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Illustration — no background panel, just the image bigger */}
+          {/* Illustration — bigger, no panel */}
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <div className="relative w-80 h-56 md:w-[400px] md:h-[280px] lg:w-[460px] lg:h-[320px]">
+            <div className="relative w-80 h-56 md:w-[420px] md:h-[290px] lg:w-[480px] lg:h-[330px]">
               <Image
                 src="/images/illustrations/hero-dev.png"
                 alt="Pixel art illustration of Devdarshan waving with a laptop"
                 fill
                 className="object-contain"
                 priority
-                sizes="(max-width: 768px) 320px, (max-width: 1024px) 400px, 460px"
+                sizes="(max-width: 768px) 320px, (max-width: 1024px) 420px, 480px"
               />
             </div>
           </div>

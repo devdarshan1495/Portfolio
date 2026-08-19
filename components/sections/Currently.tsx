@@ -5,28 +5,25 @@ export default function Currently() {
     {
       label: "Learning",
       items: currently.learning,
-      bg: "bg-blue-light",
-      accent: "text-charcoal",
-      dot: "bg-charcoal",
+      bg: "bg-golden-soft/60",
+      dot: "bg-charcoal/50",
     },
     {
       label: "Building",
       items: currently.building,
-      bg: "bg-golden-light",
-      accent: "text-charcoal",
-      dot: "bg-charcoal",
+      bg: "bg-sage-soft/60",
+      dot: "bg-charcoal/50",
     },
     {
       label: "Exploring",
       items: currently.exploring,
-      bg: "bg-sage-light",
-      accent: "text-charcoal",
-      dot: "bg-charcoal",
+      bg: "bg-lavender-soft/60",
+      dot: "bg-charcoal/50",
     },
   ];
 
   return (
-    <section className="bg-cream" aria-label="What I'm currently doing">
+    <section aria-label="What I'm currently doing">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
         <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal mb-8">
           Currently
@@ -38,9 +35,7 @@ export default function Currently() {
               key={section.label}
               className={`${section.bg} rounded-lg p-6`}
             >
-              <h3
-                className={`font-mono text-xs tracking-widest uppercase ${section.accent} mb-4 font-semibold`}
-              >
+              <h3 className="font-mono text-xs tracking-widest uppercase text-charcoal mb-4 font-semibold">
                 {section.label}
               </h3>
               <ul className="space-y-2" role="list">

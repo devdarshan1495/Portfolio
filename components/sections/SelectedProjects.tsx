@@ -7,15 +7,15 @@ export default function SelectedProjects() {
 
   if (projects.length === 0) {
     return (
-      <section className="bg-lavender-light" aria-label="Projects">
+      <section aria-label="Projects">
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
           <div className="flex items-baseline justify-between mb-8">
             <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal">
               Projects
             </h2>
           </div>
-          <div className="bg-white/50 rounded-lg p-8 text-center">
-            <p className="text-sm text-charcoal/70">
+          <div className="bg-white/40 rounded-lg p-8 text-center">
+            <p className="text-sm text-charcoal/60">
               Projects are on the way. Stay tuned.
             </p>
           </div>
@@ -27,7 +27,7 @@ export default function SelectedProjects() {
   const displayProjects = featured.length > 0 ? featured.slice(0, 3) : projects.slice(0, 3);
 
   return (
-    <section className="bg-lavender-light" aria-label="Selected projects">
+    <section aria-label="Selected projects">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
         <div className="flex items-baseline justify-between mb-8">
           <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal">
@@ -35,7 +35,7 @@ export default function SelectedProjects() {
           </h2>
           <Link
             href="/projects"
-            className="text-sm text-charcoal/70 hover:text-charcoal transition-colors group"
+            className="text-sm text-charcoal/60 hover:text-charcoal transition-colors group"
           >
             View all
             <span className="inline-block transition-transform group-hover:translate-x-0.5 ml-1">

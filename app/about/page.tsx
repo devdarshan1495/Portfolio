@@ -11,30 +11,30 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      {/* Header */}
-      <section className="bg-blue">
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 items-start">
+    <div className="bg-pg-about min-h-full">
+      {/* Header — compact, title close to bio */}
+      <section>
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
             <div>
-              <p className="font-mono text-xs tracking-widest uppercase text-white/70 mb-4">
+              <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-3">
                 About
               </p>
-              <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
                 {siteConfig.name}
               </h1>
-              <p className="mt-2 text-sm text-white/70 font-mono">
+              <p className="mt-1 text-sm text-charcoal/50 font-mono">
                 {siteConfig.title}
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="relative w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80">
+              <div className="relative w-52 h-72 md:w-60 md:h-80 lg:w-72 lg:h-96">
                 <Image
                   src="/images/illustrations/about-dev.png"
                   alt="Pixel art illustration of Devdarshan standing"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
+                  sizes="(max-width: 768px) 208px, (max-width: 1024px) 240px, 288px"
                 />
               </div>
             </div>
@@ -42,12 +42,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Bio */}
-      <section className="bg-cream">
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
+      {/* Bio — bigger text */}
+      <section>
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-10">
           <div className="max-w-2xl space-y-5">
             {siteConfig.longBio.map((paragraph, i) => (
-              <p key={i} className="text-base text-charcoal leading-relaxed">
+              <p key={i} className="text-lg text-charcoal leading-relaxed">
                 {paragraph}
               </p>
             ))}
@@ -56,8 +56,8 @@ export default function AboutPage() {
       </section>
 
       {/* Interests & Currently */}
-      <section className="bg-lavender-light">
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
+      <section>
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-10 pb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Interests */}
             <div className="bg-white/40 rounded-lg p-8">
@@ -75,9 +75,9 @@ export default function AboutPage() {
                 ].map((interest) => (
                   <li
                     key={interest}
-                    className="flex items-center gap-3 text-sm text-charcoal"
+                    className="flex items-center gap-3 text-base text-charcoal"
                   >
-                    <span className="w-2 h-2 rounded-full bg-charcoal/40 flex-shrink-0" aria-hidden="true" />
+                    <span className="w-2 h-2 rounded-full bg-charcoal/30 flex-shrink-0" aria-hidden="true" />
                     {interest}
                   </li>
                 ))}
@@ -91,30 +91,30 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-mono text-xs text-charcoal/70 mb-2 font-semibold">Learning</h3>
+                  <h3 className="font-mono text-xs text-charcoal/60 mb-2 font-semibold">Learning</h3>
                   <ul className="space-y-1.5" role="list">
                     {currently.learning.map((item) => (
-                      <li key={item} className="text-sm text-charcoal">
+                      <li key={item} className="text-base text-charcoal">
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-mono text-xs text-charcoal/70 mb-2 font-semibold">Building</h3>
+                  <h3 className="font-mono text-xs text-charcoal/60 mb-2 font-semibold">Building</h3>
                   <ul className="space-y-1.5" role="list">
                     {currently.building.map((item) => (
-                      <li key={item} className="text-sm text-charcoal">
+                      <li key={item} className="text-base text-charcoal">
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-mono text-xs text-charcoal/70 mb-2 font-semibold">Exploring</h3>
+                  <h3 className="font-mono text-xs text-charcoal/60 mb-2 font-semibold">Exploring</h3>
                   <ul className="space-y-1.5" role="list">
                     {currently.exploring.map((item) => (
-                      <li key={item} className="text-sm text-charcoal">
+                      <li key={item} className="text-base text-charcoal">
                         {item}
                       </li>
                     ))}
@@ -125,6 +125,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

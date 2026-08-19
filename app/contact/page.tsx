@@ -6,36 +6,36 @@ import SocialLinks from "@/components/ui/SocialLinks";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Devdarshan Saravanan — reach out via email, GitHub, or LinkedIn.",
+    "Get in touch with Devdarshan Saravanan — for collaborations, questions, or just to say hello.",
 };
 
 export default function ContactPage() {
   return (
-    <>
-      {/* Header */}
-      <section className="border-b border-border">
+    <div className="bg-pg-contact min-h-full">
+      {/* Header + Illustration */}
+      <section>
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
             <div>
-              <p className="font-mono text-xs tracking-widest uppercase text-muted mb-4">
+              <p className="font-mono text-sm tracking-widest uppercase text-charcoal/50 mb-4">
                 Contact
               </p>
-              <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
                 Get in Touch
               </h1>
-              <p className="mt-3 text-base text-warm-grey max-w-lg">
+              <p className="mt-4 text-lg md:text-xl text-charcoal/70 leading-relaxed max-w-lg">
                 Interested in collaborating, have a question, or just want to say
                 hello? Feel free to reach out through any of the channels below.
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="relative w-44 h-56 md:w-52 md:h-64 lg:w-56 lg:h-72 rounded-lg overflow-hidden bg-[#E891A8]">
+              <div className="relative w-56 h-72 md:w-64 md:h-80 lg:w-80 lg:h-[420px]">
                 <Image
                   src="/images/illustrations/contact-dev.png"
                   alt="Pixel art illustration of Devdarshan waving"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 176px, (max-width: 1024px) 208px, 224px"
+                  sizes="(max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
                 />
               </div>
             </div>
@@ -45,27 +45,27 @@ export default function ContactPage() {
 
       {/* Contact Methods */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Email */}
-            <div className="bg-golden-light/50 rounded-lg p-8">
-              <h2 className="font-mono text-xs tracking-widest uppercase text-golden mb-4">
+            <div className="bg-white/40 rounded-lg p-8">
+              <h2 className="font-mono text-sm tracking-widest uppercase text-charcoal font-semibold mb-4">
                 Email
               </h2>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-base text-charcoal hover:text-sky transition-colors break-all"
+                className="text-lg text-charcoal hover:text-charcoal/70 transition-colors break-all"
               >
                 {siteConfig.email}
               </a>
-              <p className="mt-2 text-sm text-warm-grey">
+              <p className="mt-3 text-base text-charcoal/60">
                 Best way to reach me for anything professional.
               </p>
             </div>
 
             {/* Social */}
-            <div className="bg-sky-light/50 rounded-lg p-8">
-              <h2 className="font-mono text-xs tracking-widest uppercase text-sky mb-4">
+            <div className="bg-white/40 rounded-lg p-8">
+              <h2 className="font-mono text-sm tracking-widest uppercase text-charcoal font-semibold mb-4">
                 Social & Profiles
               </h2>
               <SocialLinks />
@@ -73,6 +73,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

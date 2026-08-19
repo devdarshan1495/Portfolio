@@ -3,7 +3,7 @@ import { siteConfig } from "@/content/site";
 
 export default function AboutPreview() {
   return (
-    <section className="bg-blue-light" aria-label="About preview">
+    <section aria-label="About preview">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
         <div className="flex items-baseline justify-between mb-8">
           <h2 className="font-mono text-xs tracking-widest uppercase text-charcoal">
@@ -11,7 +11,7 @@ export default function AboutPreview() {
           </h2>
           <Link
             href="/about"
-            className="text-sm text-charcoal/70 hover:text-charcoal transition-colors group"
+            className="text-sm text-charcoal/60 hover:text-charcoal transition-colors group"
           >
             Read more
             <span className="inline-block transition-transform group-hover:translate-x-0.5 ml-1">
@@ -39,7 +39,7 @@ export default function AboutPreview() {
                 "Software Engineering",
               ].map((interest) => (
                 <li key={interest} className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-charcoal/40 flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-charcoal/30 flex-shrink-0" aria-hidden="true" />
                   {interest}
                 </li>
               ))}
