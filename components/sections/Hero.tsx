@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { siteConfig } from "@/content/site";
 import SocialLinks from "@/components/ui/SocialLinks";
+import HeroHeading from "./HeroHeading";
 
 export default function Hero() {
   return (
@@ -9,9 +10,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
           {/* Text Content */}
           <div className="order-2 md:order-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.1] tracking-tight">
-              {siteConfig.heroHeading}
-            </h1>
+            <HeroHeading />
             <p className="mt-3 text-xl md:text-2xl text-charcoal/70 font-medium">
               {siteConfig.heroSubheading}
             </p>

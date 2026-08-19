@@ -134,6 +134,62 @@ The UI components in `components/` and `app/` consume this data.
 - [ ] Analytics (Vercel Analytics or similar)
 - [ ] Custom domain
 
+---
+
+## Future Skills Section — Implementation Guide
+
+> **DO NOT IMPLEMENT NOW.** This section documents the planned architecture for when the Skills/Technologies section is added.
+
+### Architecture Overview
+
+The Skills section should be **data-driven** — skills stored separately from UI components. Adding/removing a skill should only require editing a data file.
+
+### Data File Structure
+
+Create `content/skills.ts` with the following structure:
+
+```ts
+export interface Skill {
+  name: string;
+  category: SkillCategory;
+  proficiency?: "beginner" | "intermediate" | "advanced";
+}
+
+export type SkillCategory =
+  | "Languages"
+  | "Frameworks & Libraries"
+  | "AI & ML"
+  | "Developer Tools"
+  | "Cloud & DevOps";
+
+export const skills: Skill[] = [
+  // Add skills here when ready
+];
+```
+
+### UI Component
+
+- Create `components/sections/Skills.tsx`
+- Import skills from `content/skills.ts`
+- Group by category and render as cards or tags
+- Follow existing component patterns (minimalist, pastel palette, pixel-art style)
+
+### Planned Categories (populate when ready)
+
+| Category | Potential Technologies |
+|---|---|
+| Languages | Python, C++, SQL, JavaScript, TypeScript |
+| Frameworks & Libraries | React, Next.js, Node.js, Tailwind CSS |
+| AI & ML | PyTorch, scikit-learn |
+| Developer Tools | Git, Docker, VS Code |
+| Cloud & DevOps | AWS, Vercel |
+
+### Important Notes
+
+- **Do not add technologies based on assumptions** — only list technologies you are confident in
+- **None of the above should appear on the portfolio** until explicitly added
+- When implementing, first read this documentation and follow this architecture
+
 ### Previous Education
 - [ ] When ready, add grade 1–12 education to `content/education.ts`
 

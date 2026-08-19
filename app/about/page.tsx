@@ -12,32 +12,31 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-pg-about min-h-full">
-      {/* Header — compact, title close to bio */}
-      <section>
+      {/* Header — text only, image absolutely positioned */}
+      <section className="relative">
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 pb-4">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
-            <div>
-              <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-3">
-                About
-              </p>
-              <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
-                {siteConfig.name}
-              </h1>
-              <p className="mt-1 text-sm text-charcoal/50 font-mono">
-                {siteConfig.title}
-              </p>
-            </div>
-            <div className="flex justify-center md:justify-end">
-              <div className="relative w-52 h-72 md:w-60 md:h-80 lg:w-72 lg:h-96">
-                <Image
-                  src="/images/illustrations/about-dev.png"
-                  alt="Pixel art illustration of Devdarshan standing"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 208px, (max-width: 1024px) 240px, 288px"
-                />
-              </div>
-            </div>
+          <div className="max-w-2xl">
+            <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-3">
+              About
+            </p>
+            <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
+              {siteConfig.name}
+            </h1>
+            <p className="mt-1 text-sm text-charcoal/50 font-mono">
+              {siteConfig.title}
+            </p>
+          </div>
+        </div>
+        {/* Illustration — absolutely positioned, doesn't affect text flow */}
+        <div className="hidden md:block absolute top-8 right-[var(--spacing-page)] lg:right-[calc((100vw-72rem)/2+var(--spacing-page))]">
+          <div className="relative w-48 h-64 lg:w-60 lg:h-80">
+            <Image
+              src="/images/illustrations/about-dev.png"
+              alt="Pixel art illustration of Devdarshan standing"
+              fill
+              className="object-contain object-top"
+              sizes="(max-width: 1024px) 192px, 240px"
+            />
           </div>
         </div>
       </section>

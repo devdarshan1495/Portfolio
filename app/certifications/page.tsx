@@ -18,15 +18,11 @@ export default function CertificationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
             <div>
               <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-3">
-                Certifications
+                CREDENTIALS
               </p>
               <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
-                Certifications
+                Things I&apos;ve Learned Beyond the Classroom
               </h1>
-              <p className="mt-3 text-base text-charcoal/70 max-w-lg">
-                Professional certifications and credentials I&apos;ve earned along the
-                way.
-              </p>
             </div>
             <div className="flex justify-center md:justify-end">
               <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">

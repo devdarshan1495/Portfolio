@@ -11,37 +11,33 @@ export const metadata: Metadata = {
 export default function EducationPage() {
   return (
     <div className="bg-pg-education min-h-full">
-      {/* Header */}
+      {/* Header + Education Timeline (single continuous section) */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 pb-2">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 pb-16">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
             <div>
               <p className="font-mono text-xs tracking-widest uppercase text-charcoal/50 mb-3">
-                Education
+                MY JOURNEY
               </p>
               <h1 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
                 Education & Achievements
               </h1>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <Image
                   src="/images/illustrations/Education (2).png"
                   alt="Pixel art illustration for education"
                   fill
                   className="object-contain object-top"
-                  sizes="(max-width: 768px) 208px, (max-width: 1024px) 240px, 288px"
+                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
                 />
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Education Timeline */}
-      <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16 pt-0">
-          <div className="space-y-6">
+          {/* Education entries */}
+          <div className="mt-8 space-y-6">
             {education.map((edu, i) => (
               <article
                 key={i}

@@ -83,6 +83,8 @@ export interface SiteConfig {
   tagline: string;
   heroHeading: string;
   heroSubheading: string;
+  /** Phrases for the hero slot-machine animation (text after "Hi, I'm ") */
+  heroDescriptors: string[];
   shortBio: string;
   longBio: string[];
   email: string;
