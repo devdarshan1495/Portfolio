@@ -29,8 +29,8 @@ export default function Footer() {
   const isContact = pathname === "/contact";
   const borderClass = isContact ? "border-white/20" : "border-charcoal/10";
   const textMain = isContact ? "text-white" : "text-charcoal";
-  const textMuted = isContact ? "text-white/70" : "text-muted";
-  const textLink = isContact ? "text-white/70 hover:text-white" : "text-warm-grey hover:text-charcoal";
+  const textMuted = isContact ? "text-white/90 font-medium" : "text-muted";
+  const textLink = isContact ? "text-white/90 font-medium hover:text-white" : "text-warm-grey hover:text-charcoal";
 
   return (
     <footer className={`border-t ${borderClass}`} style={{ backgroundColor: footerBg }}>
