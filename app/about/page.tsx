@@ -29,13 +29,13 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="relative w-40 h-52 md:w-48 md:h-60">
+              <div className="relative w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80 rounded-lg overflow-hidden bg-[#5B9BD5]">
                 <Image
                   src="/images/illustrations/about-dev.png"
                   alt="Pixel art illustration of Devdarshan standing"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 160px, 192px"
+                  sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
                 />
               </div>
             </div>
@@ -59,10 +59,10 @@ export default function AboutPage() {
       {/* Interests & Currently */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Interests */}
-            <div className="bg-background p-8">
-              <h2 className="font-mono text-xs tracking-widest uppercase text-muted mb-6">
+            <div className="bg-sky-light/60 rounded-lg p-8">
+              <h2 className="font-mono text-xs tracking-widest uppercase text-sky mb-6">
                 Areas of Interest
               </h2>
               <ul className="space-y-3" role="list">
@@ -78,7 +78,7 @@ export default function AboutPage() {
                     key={interest}
                     className="flex items-center gap-3 text-sm text-charcoal"
                   >
-                    <span className="w-1.5 h-1.5 bg-sky flex-shrink-0" aria-hidden="true" />
+                    <span className="w-2 h-2 rounded-full bg-sky flex-shrink-0" aria-hidden="true" />
                     {interest}
                   </li>
                 ))}
@@ -86,7 +86,7 @@ export default function AboutPage() {
             </div>
 
             {/* Currently */}
-            <div className="bg-background p-8">
+            <div className="bg-sage-light/60 rounded-lg p-8">
               <h2 className="font-mono text-xs tracking-widest uppercase text-muted mb-6">
                 Right Now
               </h2>

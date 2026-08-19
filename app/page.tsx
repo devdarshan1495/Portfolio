@@ -28,12 +28,12 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section aria-label="Contact">
+      <section aria-label="Contact" className="bg-pink-light/40">
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
-          <h2 className="font-mono text-xs tracking-widest uppercase text-muted mb-4">
+          <h2 className="font-mono text-xs tracking-widest uppercase text-pink mb-4">
             Get in touch
           </h2>
-          <p className="text-base text-warm-grey mb-8 max-w-md">
+          <p className="text-base text-charcoal mb-8 max-w-md">
             Interested in working together or just want to say hi? Feel free to
             reach out through any of the links below.
           </p>

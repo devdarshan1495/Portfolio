@@ -6,13 +6,13 @@ export default function NotFound() {
     <div className="flex flex-1 items-center justify-center">
       <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-24 text-center">
         <div className="flex justify-center mb-8">
-          <div className="relative w-40 h-44">
+          <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-lg overflow-hidden bg-[#B8A0D4]">
             <Image
               src="/images/illustrations/404-dev.png"
               alt="Pixel art illustration of Devdarshan looking confused with a question mark"
               fill
               className="object-contain"
-              sizes="160px"
+              sizes="(max-width: 768px) 192px, 224px"
             />
           </div>
         </div>

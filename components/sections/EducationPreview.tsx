@@ -23,7 +23,7 @@ export default function EducationPreview() {
           </Link>
         </div>
 
-        <div className="border border-border bg-white p-6 md:p-8">
+        <div className="bg-golden-light rounded-lg p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
               <h3 className="text-lg font-semibold text-charcoal">

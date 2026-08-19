@@ -30,16 +30,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Illustration */}
+          {/* Illustration — golden background panel */}
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <div className="relative w-48 h-56 md:w-56 md:h-64 lg:w-64 lg:h-72">
+            <div className="relative w-72 h-48 md:w-80 md:h-56 lg:w-96 lg:h-64 rounded-lg overflow-hidden bg-[#F2B735]">
               <Image
                 src="/images/illustrations/hero-dev.png"
                 alt="Pixel art illustration of Devdarshan waving with a laptop"
                 fill
                 className="object-contain"
                 priority
-                sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
+                sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
               />
             </div>
           </div>

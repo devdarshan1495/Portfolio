@@ -29,13 +29,13 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="relative w-32 h-36 md:w-40 md:h-44">
+              <div className="relative w-44 h-56 md:w-52 md:h-64 lg:w-56 lg:h-72 rounded-lg overflow-hidden bg-[#E891A8]">
                 <Image
                   src="/images/illustrations/contact-dev.png"
                   alt="Pixel art illustration of Devdarshan waving"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 128px, 160px"
+                  sizes="(max-width: 768px) 176px, (max-width: 1024px) 208px, 224px"
                 />
               </div>
             </div>
@@ -46,10 +46,10 @@ export default function ContactPage() {
       {/* Contact Methods */}
       <section>
         <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Email */}
-            <div className="bg-background p-8">
-              <h2 className="font-mono text-xs tracking-widest uppercase text-muted mb-4">
+            <div className="bg-golden-light/50 rounded-lg p-8">
+              <h2 className="font-mono text-xs tracking-widest uppercase text-golden mb-4">
                 Email
               </h2>
               <a
@@ -64,8 +64,8 @@ export default function ContactPage() {
             </div>
 
             {/* Social */}
-            <div className="bg-background p-8">
-              <h2 className="font-mono text-xs tracking-widest uppercase text-muted mb-4">
+            <div className="bg-sky-light/50 rounded-lg p-8">
+              <h2 className="font-mono text-xs tracking-widest uppercase text-sky mb-4">
                 Social & Profiles
               </h2>
               <SocialLinks />

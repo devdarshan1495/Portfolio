@@ -20,17 +20,17 @@ export default function AboutPreview() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 items-start">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 items-start">
+          <div className="bg-sky-light/50 rounded-lg p-6">
             <p className="text-base text-charcoal leading-relaxed">
               {siteConfig.longBio[0]}
             </p>
           </div>
-          <div className="border border-border p-5 bg-white">
-            <h3 className="font-mono text-xs tracking-widest uppercase text-muted mb-3">
+          <div className="bg-purple-light rounded-lg p-5">
+            <h3 className="font-mono text-xs tracking-widest uppercase text-purple mb-3">
               Interests
             </h3>
-            <ul className="space-y-1.5 text-sm text-warm-grey" role="list">
+            <ul className="space-y-1.5 text-sm text-charcoal" role="list">
               {[
                 "Full-Stack Development",
                 "Cloud Computing",
@@ -39,7 +39,7 @@ export default function AboutPreview() {
                 "Software Engineering",
               ].map((interest) => (
                 <li key={interest} className="flex items-center gap-2">
-                  <span className="w-1 h-1 bg-sky flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-purple flex-shrink-0" aria-hidden="true" />
                   {interest}
                 </li>
               ))}

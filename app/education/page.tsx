@@ -34,7 +34,7 @@ export default function EducationPage() {
             {education.map((edu, i) => (
               <article
                 key={i}
-                className="border border-border bg-white p-6 md:p-8"
+                className="bg-golden-light/50 rounded-lg p-6 md:p-8"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div>
@@ -90,9 +90,9 @@ export default function EducationPage() {
               Achievements
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {achievements.map((achievement, i) => (
-                <article key={i} className="bg-background p-6 md:p-8">
+                <article key={i} className={`rounded-lg p-6 md:p-8 ${i % 2 === 0 ? 'bg-sky-light/50' : 'bg-pink-light/50'}`}>
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h3 className="text-base font-semibold text-charcoal">
