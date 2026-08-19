@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
     "Dev.",
     "a developer.",
     "learning ML.",
-    "building stuff.",
+    "building.",
   ],
   shortBio:
     "I'm a Computer Science student who enjoys building things, experimenting with technology, and figuring out how things work. I'm currently exploring software development, cloud, AI/ML, and everything in between.",

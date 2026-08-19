@@ -42,29 +42,29 @@ export default function ContactPage() {
 
   return (
     <div className="bg-pg-contact min-h-full">
-      {/* Header + Illustration */}
-      <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 md:pt-16 pb-8 md:pb-10">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
+      {/* Header — text + illustration side by side */}
+      <section className="relative">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-12 pb-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
             <div>
-              <p className="font-mono text-sm tracking-widest uppercase text-charcoal/50 mb-4">
+              <p className="font-mono text-sm font-semibold tracking-widest uppercase text-white/70 mb-4">
                 Contact
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 Get in Touch
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-charcoal/70 leading-relaxed max-w-lg">
+              <p className="mt-4 text-lg md:text-xl text-white/70 leading-relaxed max-w-lg">
                 Have a question or want to collaborate? Fill out the form below.
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="relative w-56 h-72 md:w-64 md:h-80 lg:w-80 lg:h-[420px]">
+              <div className="relative w-40 h-52 md:w-48 md:h-64 lg:w-56 lg:h-72">
                 <Image
                   src="/images/illustrations/contact-dev.png"
                   alt="Pixel art illustration of Devdarshan waving"
                   fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
+                  className="object-contain object-top"
+                  sizes="(max-width: 768px) 160px, (max-width: 1024px) 192px, 224px"
                 />
               </div>
             </div>
@@ -72,9 +72,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Contact Form — immediately below header */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pb-16 pt-0">
           <div className="max-w-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
