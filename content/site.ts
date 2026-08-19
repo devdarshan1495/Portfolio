@@ -5,11 +5,11 @@ export const siteConfig: SiteConfig = {
   firstName: "Dev",
   title: "Computer Science Student · Developer · Builder",
   tagline: "I build software & explore AI.",
-  heroHeading: "Hi, I'm Dev.",
+  heroHeading: "Hi, I'm Devdarshan.",
   heroSubheading: "I build software & explore AI.",
   /** Phrases for the hero slot-machine animation. Each entry is the text after "Hi, I'm " */
   heroDescriptors: [
-    "Dev.",
+    "Devdarshan.",
     "a developer.",
     "learning ML.",
     "building.",

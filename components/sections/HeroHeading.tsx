@@ -31,6 +31,7 @@ export default function HeroHeading() {
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPrefersReducedMotion(mq.matches);
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
     mq.addEventListener("change", handler);
@@ -94,8 +95,13 @@ export default function HeroHeading() {
     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.1] tracking-tight">
       <span>Hi, I&apos;m </span>
       <span
-        className="inline-flex relative overflow-hidden align-bottom"
-        style={{ verticalAlign: "baseline", height: "1.2em" }}
+        className="inline-flex relative align-bottom"
+        style={{
+          verticalAlign: "baseline",
+          height: "1.2em",
+          // Clip vertically to container height, but allow horizontal overflow to prevent clipping wider incoming text
+          clipPath: "polygon(-1000% 0, 1000% 0, 1000% 100%, -1000% 100%)",
+        }}
       >
         {/* Current text */}
         <span

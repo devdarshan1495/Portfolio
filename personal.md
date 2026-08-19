@@ -124,6 +124,7 @@ The UI components in `components/` and `app/` consume this data.
 - [ ] Study ML properly and get invested in the field
 - [ ] Add relevant coursework when available
 - [ ] Consider adding a "Skills" or "Technologies" detailed section
+- [ ] Add schooling details and work experience to create a complete timeline in the Academics/Education section
 
 ### Features to Consider
 - [ ] Experience / Internships section (when applicable)

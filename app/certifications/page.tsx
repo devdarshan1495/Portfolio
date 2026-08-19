@@ -24,14 +24,14 @@ export default function CertificationsPage() {
                 Things I&apos;ve Learned Beyond the Classroom
               </h1>
             </div>
-            <div className="flex justify-center md:justify-end">
-              <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <div className="flex justify-center md:justify-end md:-mt-4 lg:-mt-8 md:-mb-16 lg:-mb-28">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <Image
                   src="/images/illustrations/Certifications_demo (1).png"
                   alt="Pixel art illustration for certifications"
                   fill
                   className="object-contain object-top"
-                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 320px"
+                  sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
                 />
               </div>
             </div>
@@ -49,7 +49,7 @@ export default function CertificationsPage() {
               ))}
             </div>
           ) : (
-            <div className="bg-white/40 rounded-lg p-12 text-center">
+            <div className="bg-cream rounded-lg p-12 text-center">
               <p className="text-lg font-semibold text-charcoal mb-1">
                 Certifications coming soon
               </p>

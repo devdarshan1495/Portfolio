@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/", label: "Home", barColor: "bg-bar-home" },
   { href: "/about", label: "About", barColor: "bg-bar-about" },
   { href: "/projects", label: "Projects", barColor: "bg-bar-projects" },
-  { href: "/education", label: "Education", barColor: "bg-bar-education" },
+  { href: "/education", label: "Academics", barColor: "bg-bar-education" },
   { href: "/certifications", label: "Certifications", barColor: "bg-bar-certifications" },
   { href: "/blog", label: "Blog", barColor: "bg-bar-blog" },
   { href: "/contact", label: "Contact", barColor: "bg-bar-contact" },
@@ -33,7 +33,7 @@ export default function Navigation() {
         {/* Logo / Name */}
         <Link
           href="/"
-          className="font-mono text-base font-semibold tracking-wide text-charcoal hover:text-golden transition-colors"
+          className="font-mono text-xl md:text-2xl font-bold tracking-wide text-charcoal hover:text-golden transition-colors"
           aria-label="Go to homepage"
         >
           {siteConfig.firstName.toLowerCase()}
