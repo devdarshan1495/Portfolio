@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className="bg-pg-contact min-h-full">
       {/* Header + Illustration */}
       <section>
-        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] py-16 md:py-24">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-[var(--spacing-page)] pt-16 md:pt-24 pb-8 md:pb-10">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
             <div>
               <p className="font-mono text-sm tracking-widest uppercase text-charcoal/50 mb-4">

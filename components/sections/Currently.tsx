@@ -5,20 +5,20 @@ export default function Currently() {
     {
       label: "Learning",
       items: currently.learning,
-      bg: "bg-golden-soft/60",
-      dot: "bg-charcoal/50",
+      bg: "bg-white/70 shadow-sm border border-white",
+      dot: "bg-golden",
     },
     {
       label: "Building",
       items: currently.building,
-      bg: "bg-sage-soft/60",
-      dot: "bg-charcoal/50",
+      bg: "bg-white/70 shadow-sm border border-white",
+      dot: "bg-sage",
     },
     {
       label: "Exploring",
       items: currently.exploring,
-      bg: "bg-lavender-soft/60",
-      dot: "bg-charcoal/50",
+      bg: "bg-white/70 shadow-sm border border-white",
+      dot: "bg-lavender",
     },
   ];
 
