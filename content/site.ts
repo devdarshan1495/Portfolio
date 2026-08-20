@@ -51,5 +51,5 @@ export const siteConfig: SiteConfig = {
       textColor: "#ffffff",
     },
   ],
-  resumePath: "/resume/Devdarshan-Saravanan-Resume.pdf",
+  resumePath: "/resume/Devdarshan-Saravanan-Resume-v2.pdf",
 };
